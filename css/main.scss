@@ -1,0 +1,162 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-color: #dbe9f4;
+
+    .image {
+        overflow: hidden;
+
+        img {
+            width: 100%;
+            border-radius: 0.4rem;
+        }
+    }
+
+    .container {
+        margin: 1rem;
+        padding: 1.2rem;
+        background-color: #ffffff;
+        border-radius: 0.4rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 2rem;
+
+        .image-input {
+            width: 100%;
+
+            h1 {
+                margin-bottom: 1rem;
+                font-size: 1.5rem;
+                font-weight: 500;
+            }
+        }
+
+        .filters {
+            width: 100%;
+            box-shadow: 0 0 0px 0.5px #a3a3a3;
+            padding: 1rem;
+            border-radius: 0.2rem;
+
+            &.disabled {
+                .bttns {
+                    button {
+                        &.actived {
+                            color: #ffffff;
+                            background-color: #a9b9f8;
+                            box-shadow: 0 0 0px 0.5px #a9b9f8;
+                        }
+                    }
+                }
+
+                .slider {
+                    input[type="range"]::-webkit-slider-thumb {
+                        box-shadow: -150px 0 0 150px #a9b9f8;
+                    }
+                }
+            }
+
+            .title {
+                text-align: left;
+                h2 {
+                    margin-bottom: 1rem;
+                    font-size: 1.1rem;
+                    color: #a3a3a3;
+                    font-weight: 400;
+                }
+            }
+
+            .bttns {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: repeat(2, 1fr);
+                gap: 0.8rem;
+                button {
+                    padding: 0.6rem;
+                    box-shadow: 0 0 0px 0.5px #a3a3a3;
+                    border: 0;
+                    background-color: transparent;
+                    border-radius: 0.2rem;
+                    font-size: 0.95rem;
+                    outline: 0;
+                    color: #a3a3a3;
+
+                    &.actived {
+                        color: #ffffff;
+                        background-color: #5372f0;
+                        box-shadow: 0 0 0px 0.5px #5372f0;
+                    }
+                }
+            }
+
+            .slider {
+                margin: 2rem 0;
+
+                .titles {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                }
+
+                input[type="range"] {
+                    width: 100%;
+                    -webkit-appearance: none;
+                    background-color: #e5e5e5;
+                    box-shadow: 0 0 0px 0.8px black;
+                    border-radius: 0.5rem;
+                    overflow: hidden;
+                }
+
+                input[type="range"]::-webkit-slider-runnable-track {
+                    height: 10px;
+                    -webkit-appearance: none;
+                    color: #13bba4;
+                }
+
+                input[type="range"]::-webkit-slider-thumb {
+                    width: 18px;
+                    -webkit-appearance: none;
+                    height: 18px;
+                    cursor: ew-resize;
+                    background: #434343;
+                    transform: translateY(-0.4rem);
+                    box-shadow: -150px 0 0 150px #5372f0;
+                }
+            }
+
+            .configs {
+                .functions {
+                    display: grid;
+                    grid-template-columns: repeat(4, 1fr);
+                    gap: 0.4rem;
+
+                    button {
+                        padding: 0.6rem;
+                        box-shadow: 0 0 0px 0.5px #a3a3a3;
+                        border: 0;
+                        background-color: transparent;
+                        border-radius: 0.2rem;
+                        font-size: 0.95rem;
+                        outline: 0;
+                        color: #a3a3a3;
+                        transition: all 0.3s ease-in-out;
+
+                        &:active,
+                        &:hover {
+                            color: #ffffff;
+                            background-color: #5372f0;
+                            box-shadow: 0 0 0px 0.5px #5372f0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+    <link rel="stylesheet" href="css/main.css">
+    <script defer src="script.js"></script>
+
+    <title>Image Editor | @felipesoarws</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="image-input">
+            <div class="title">
+                <h1>Easy Image Editor</h1>
+            </div>
+            <div class="image">
+                <img src="./images/image-placeholder.svg" alt="image" class="preview-img" />
+            </div>
+        </div>
+        <div class="filters disabled">
+            <div class="title">
+                <h2>Filters</h2>
+                <div class="bttns">
+                    <button disabled class="brightness actived">Brightness</button>
+                    <button disabled class="saturation">Saturation</button>
+                    <button disabled class="inversion">Inversion</button>
+                    <button disabled class="grayscale">Grayscale</button>
+                </div>
+                <div class="slider">
+                    <div class="titles">
+                        <h2>Brightness</h2>
+                        <div class="percent">
+                            <h2>100%</h2>
+                        </div>
+                    </div>
+                    <input type="range" id="range" min='0' max='200' disabled />
+                </div>
+                <div class="configs">
+                    <div class="title">
+                        <h2>Rotate & Flip</h2>
+                    </div>
+                    <div class="functions">
+                        <button disabled id="left"><i class="fa-solid fa-rotate-left"></i></button>
+                        <button disabled id="right"><i class="fa-solid fa-rotate-right"></i></button>
+                        <button disabled id="horizontal"><i class='bx bx-reflect-vertical'></i></button>
+                        <button disabled id="vertical"><i class='bx bx-reflect-horizontal'></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="reset-filters"></div>
+        <div class="choose-image">
+            <input type="file" id="file-input" accept="image/*" hidden>
+            <button id="choose-image">Choose Image</button>
+            <button disabled id="save-image">Save Image</button>
+        </div>
+    </div>
+</body>
+
+</html>
